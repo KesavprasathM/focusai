@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: focusai
+    env: python
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: gunicorn --worker-class eventlet -w 1 app:app --bind 0.0.0.0:$PORT
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0

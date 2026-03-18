@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+*.pth
+*.pt
+*.bin
+data/
+uploads/
+heatmaps/
+exports/
+config.env
+.env
+models/
+deploy.gitignore

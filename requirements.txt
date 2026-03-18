@@ -1,0 +1,15 @@
+flask==3.0.3
+flask-cors==4.0.1
+flask-limiter==3.8.0
+flask-socketio==5.3.6
+opencv-python-headless==4.10.0.84
+pillow==10.4.0
+numpy==1.26.4
+scikit-learn==1.5.1
+librosa==0.10.2
+soundfile==0.12.1
+requests==2.32.3
+tqdm==4.66.4
+albumentations==1.4.10
+gunicorn==22.0.0
+eventlet==0.36.1
