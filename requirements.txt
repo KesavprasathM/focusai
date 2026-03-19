@@ -12,4 +12,5 @@ requests==2.32.3
 tqdm==4.66.4
 albumentations==1.4.10
 gunicorn==22.0.0
-eventlet==0.36.1
+gevent==24.2.1
+gevent-websocket==0.10.1
