@@ -2,9 +2,8 @@ services:
   - type: web
     name: focusai
     env: python
-    runtime: python3.11
     buildCommand: chmod +x build.sh && ./build.sh
-    startCommand: gunicorn --worker-class gevent -w 1 app:app --bind 0.0.0.0:$PORT
+    startCommand: gunicorn -w 1 app:app --bind 0.0.0.0:$PORT
     plan: free
     envVars:
       - key: PYTHON_VERSION
