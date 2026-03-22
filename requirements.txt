@@ -1,6 +1,6 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.9.0+cpu
-torchvision
+torchvision==0.24.0+cpu
 flask==3.0.3
 flask-cors==4.0.1
 flask-limiter==3.8.0
