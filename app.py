@@ -788,9 +788,11 @@ def not_found(e):     return jsonify({'success': False, 'error': 'Not found'}), 
 if __name__ == '__main__':
     print("""
 ╔═══════════════════════════════════════════════════╗
-║  TruthLens v4.0 — AI/Deepfake Detection API      ║
-║  Image · Video · Batch · ELA · Metadata · Audio  ║
+║  TruthLens v4.0 — AI/Deepfake Detection API       ║
+║  Image · Video · Batch · ELA · Metadata · Audio   ║
 ╚═══════════════════════════════════════════════════╝
 """)
     model_manager.load()
-    socketio.run(app, host='0.0.0.0', port=5000, debug=False)
+    # socketio.run(app, host='0.0.0.0', port=5000, debug=False)
+    port = int(os.environ.get('PORT', 5000))
+socketio.run(app, host='0.0.0.0', port=port, debug=False)
