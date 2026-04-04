@@ -496,7 +496,7 @@ def generate_gradcam(image: Image.Image, model, job_id: str) -> Optional[str]:
 
 # ─────────────────────────────── HELPERS
 def get_verdict(score: float, hi=0.55, lo=0.45):
-    return 'AI_GENERATED' if score >= hi else ('AUTHENTIC' if score <= lo else 'UNCERTAIN')
+    return 'AUTHENTIC' if score >= hi else ('AI_GENERATED' if score <= lo else 'UNCERTAIN')
 
 def preprocess_image(src) -> Image.Image:
     img = Image.open(src).convert('RGB')
@@ -794,5 +794,5 @@ if __name__ == '__main__':
 """)
     model_manager.load()
     # socketio.run(app, host='0.0.0.0', port=5000, debug=False)
-    port = int(os.environ.get('PORT', 8080))
+    port = int(os.environ.get('PORT', 5000))
     socketio.run(app, host='0.0.0.0', port=port, debug=False)
