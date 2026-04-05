@@ -795,4 +795,5 @@ if __name__ == '__main__':
     model_manager.load()
     # socketio.run(app, host='0.0.0.0', port=7860, debug=False)
     port = int(os.environ.get('PORT', 7860))
-    socketio.run(app, host='0.0.0.0', port=port, debug=False)
+    # NEW - replace with this
+socketio.run(app, host='0.0.0.0', port=port, debug=False, allow_unsafe_werkzeug=True)
