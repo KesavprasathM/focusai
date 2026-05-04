@@ -135,6 +135,8 @@ Press **`Ctrl + S`**
  └── 📁 venv                  ✅
 
 
+
+data set use kaggle for refernece 
  to run this first to checck everything
 
  python check_setup.py
